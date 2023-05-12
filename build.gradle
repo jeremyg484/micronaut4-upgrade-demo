@@ -20,7 +20,7 @@ dependencies {
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut:micronaut-jackson-databind")
     runtimeOnly("ch.qos.logback:logback-classic")
-    rewrite("org.openrewrite.recipe:rewrite-micronaut:1.25.0-SNAPSHOT")
+    rewrite("org.micronaut.rewrite:rewrite-micronaut4:0.1.0-SNAPSHOT")
 }
 
 application {
@@ -32,7 +32,7 @@ java {
 }
 
 rewrite {
-    activeRecipe("org.openrewrite.java.micronaut.Micronaut3to4Migration")
+    activeRecipe("org.micronaut.rewrite.Micronaut3to4Migration")
 }
 
 graalvmNative.toolchainDetection = false
