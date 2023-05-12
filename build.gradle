@@ -27,8 +27,8 @@ application {
     mainClass.set("com.example.Application")
 }
 java {
-    sourceCompatibility = JavaVersion.toVersion("1.8")
-    targetCompatibility = JavaVersion.toVersion("1.8")
+    sourceCompatibility = "1.8"
+    targetCompatibility = "1.8"
 }
 
 rewrite {
