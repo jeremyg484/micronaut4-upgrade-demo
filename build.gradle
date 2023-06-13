@@ -1,7 +1,7 @@
 plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("io.micronaut.application") version "3.7.9"
-    id("org.openrewrite.rewrite") version("5.40.0")
+    id("org.openrewrite.rewrite") version("latest.integration")
 }
 
 version = "0.1"
@@ -21,7 +21,7 @@ dependencies {
     implementation("io.micronaut:micronaut-jackson-databind")
     implementation("jakarta.annotation:jakarta.annotation-api")
     runtimeOnly("ch.qos.logback:logback-classic")
-    rewrite("io.micronaut.rewrite:rewrite-micronaut4:0.1.0-SNAPSHOT")
+    rewrite("org.openrewrite.recipe:rewrite-micronaut:2.1.0-SNAPSHOT")
 }
 
 application {
@@ -33,7 +33,7 @@ java {
 }
 
 rewrite {
-    activeRecipe("io.micronaut.rewrite.Micronaut3to4Migration")
+    activeRecipe("org.openrewrite.java.micronaut.Micronaut3to4Migration")
 }
 
 graalvmNative.toolchainDetection = false
