@@ -34,7 +34,7 @@ java {
 }
 
 rewrite {
-    activeRecipe("org.openrewrite.java.micronaut.Micronaut3to4Migration")
+    activeRecipe("com.example.ShowIncorrectReporting")
 }
 
 graalvmNative.toolchainDetection = false

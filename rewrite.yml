@@ -1,0 +1,7 @@
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: com.example.ShowIncorrectReporting
+recipeList:
+  - org.openrewrite.java.migrate.JavaVersion17
+  - org.openrewrite.gradle.UpdateGradleWrapper:
+      version: 8.x
