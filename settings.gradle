@@ -1,3 +1,23 @@
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.namespace == "org.openrewrite") {
+                useModule("org.openrewrite:plugin:${requested.version}")
+            }
+        }
+    }
+
+    repositories {
+        // ...
+        maven {
+            url = uri("https://oss.sonatype.org/content/repositories/snapshots/")
+        }
+        // ...
+        // you'll likely also need this if you don't have a pluginManagement section already:
+        gradlePluginPortal()
+        // ...
+    }
+}
 
 rootProject.name="upgrade-demo"
 
