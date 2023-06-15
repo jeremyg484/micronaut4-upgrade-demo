@@ -1,7 +1,7 @@
 plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("io.micronaut.application") version "3.7.9"
-    id("org.openrewrite.rewrite") version("latest.integration")
+    id("org.openrewrite.rewrite") version("latest.release")
 }
 
 version = "0.1"
@@ -22,7 +22,7 @@ dependencies {
     implementation("jakarta.annotation:jakarta.annotation-api")
     implementation("io.micronaut:micronaut-validation")
     runtimeOnly("ch.qos.logback:logback-classic")
-    rewrite("org.openrewrite.recipe:rewrite-micronaut:2.1.0-SNAPSHOT")
+    rewrite("org.openrewrite.recipe:rewrite-micronaut:2.0.1")
 }
 
 application {
